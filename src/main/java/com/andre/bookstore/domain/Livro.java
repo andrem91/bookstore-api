@@ -1,4 +1,4 @@
-package com.ande.bookstore.domain;
+package com.andre.bookstore.domain;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -20,6 +20,7 @@ public class Livro implements Serializable {
 	private Integer id;
 	private String titulo;
 	private String nome_autor;
+	private String texto;
 
 	@ManyToOne
 	@JoinColumn(name = "categoria_id")
@@ -29,11 +30,12 @@ public class Livro implements Serializable {
 		super();
 	}
 
-	public Livro(Integer id, String titulo, String nome_autor, Categoria categoria) {
+	public Livro(Integer id, String titulo, String nome_autor, String texto, Categoria categoria) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.nome_autor = nome_autor;
+		this.texto = texto;
 		this.categoria = categoria;
 	}
 
@@ -67,6 +69,14 @@ public class Livro implements Serializable {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
 	}
 
 	@Override
