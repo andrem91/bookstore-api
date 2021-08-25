@@ -1,4 +1,4 @@
-package com.andre.bookstore.resources.exceptions;
+package com.andre.bookstore.services.exceptions;
 
 public class DataIntegrityViolationException extends RuntimeException {
 
