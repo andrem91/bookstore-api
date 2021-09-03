@@ -24,7 +24,7 @@ import com.andre.bookstore.services.CategoriaService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/categorias")
+@RequestMapping("/categorias")
 public class CategoriaResource {
 
 	@Autowired
